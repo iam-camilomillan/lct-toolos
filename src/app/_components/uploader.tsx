@@ -29,7 +29,7 @@ export default function CsvUploader() {
                 // All remaining headers = empty
                 const header = [
                     "payorId",
-                    ...Array(columnCount).fill(""),
+                    ...Array.from({ length: columnCount }, () => ""),
                 ];
 
                 const dataRows = rows.map((row) => {
